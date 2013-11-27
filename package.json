@@ -1,0 +1,18 @@
+{
+  "name": "upgrader",
+  "version": "0.0.1",
+  "description": "check update, download zip file, and extract",
+  "main": "upgrader.js",
+  "dependencies": {
+    "unzip": "~0.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wiky/upgrader.git"
+  },
+  "author": "wiky.chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wiky/upgrader/issues"
+  }
+}
