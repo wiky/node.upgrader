@@ -1,10 +1,10 @@
 var Upgrader = require('../upgrader');
 
 var upgrader = Upgrader({
-	url: 'http://wiky.github.io/upgrader/for-test/demo.zip',
+	url: 'http://wiky.github.io/node.upgrader/for-test/demo.zip',
 	version: {
 		local: './version.json',
-		remote: 'http://wiky.github.io/upgrader/for-test/version.json'
+		remote: 'http://wiky.github.io/node.upgrader/for-test/version.json'
 	},
 	dest: './download/file/path'
 });
