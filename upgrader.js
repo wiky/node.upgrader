@@ -157,11 +157,34 @@ Upgrader.prototype._getReqest = function(url) {
     return req;
 };
 
+Upgrader.prototype.greaterThan = function(v1, v2) {
+    var v1Arr = v1.split('.'),
+        v2Arr = v2.split('.'),
+        arr = v1Arr,
+        value1, value2;
+
+    function prefixInteger(num, len) {
+        return (Array(len).join('0') + num).slice(-len);
+    }
+
+    if (v1Arr.length < v2Arr.length) {
+        arr = v2Arr;
+    }
+    arr.forEach(function(item, i) {
+        var item1 = v1Arr[i] || '0',
+            item2 = v2Arr[i] || '0',
+            length = Math.max(item1.length, item2.length);
+        v1Arr[i] = prefixInteger(item1, length);
+        v2Arr[i] = prefixInteger(item2, length);
+    });
+    return v1Arr.join('.') > v2Arr.join('.');
+};
+
 function mkdirs(dirPath, mode, cb) {
     var dirs = dirPath.replace(/\/?[^\/]+\/?/g, '$`$&,').split(',');
     dirs.pop();
     (function next(e) {
-        var finished = ! dirs.length,
+        var finished = !dirs.length,
             dir = dirs.shift();
 
         if (!e) {

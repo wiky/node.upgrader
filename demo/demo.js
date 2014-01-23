@@ -11,7 +11,7 @@ var upgrader = Upgrader({
 
 upgrader.check(function(local, remote) {
 	if (remote) {
-		if ((local && local.version < remote.version) || !local) {
+		if ((local && this.greaterThan(remote.version, local.version)) || !local) {
 			this.download(function() {
 				this.extract(true);
 			});
