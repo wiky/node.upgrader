@@ -1,6 +1,6 @@
 {
-  "name": "upgrader",
-  "version": "0.0.2",
+  "name": "node.upgrader",
+  "version": "0.1.2",
   "description": "check update, download zip file, and extract",
   "main": "upgrader.js",
   "dependencies": {
@@ -9,10 +9,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/wiky/upgrader.git"
-  },
-  "author": "wiky.chen",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wiky/upgrader/issues"
   }
 }
