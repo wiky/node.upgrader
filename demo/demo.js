@@ -2,11 +2,11 @@ var Upgrader = require('../upgrader');
 
 var upgrader = Upgrader({
 	url: 'http://wiky.github.io/node.upgrader/for-test/demo.zip',
+	dest: './download/file/path',
 	version: {
-		local: './version.json',
+		local: './download/file/path/version.json',
 		remote: 'http://wiky.github.io/node.upgrader/for-test/version.json'
-	},
-	dest: './download/file/path'
+	}
 });
 
 upgrader.check(function(local, remote) {
