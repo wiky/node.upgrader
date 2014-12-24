@@ -1,0 +1,26 @@
+{
+    "name": "YourAppName",
+    "description": "",
+    "version": "0.3.0",
+    "main": "index.html",
+    "node-main": "resources/start.js",
+    "window": {
+        "icon": "",
+        "width": 1000,
+        "height": 640,
+        "toolbar": false,
+        "frame": true
+    },
+    "dependencies": {
+        "node.upgrader": "*"
+    },
+    "appDataPath": "./",
+    "upgrader": {
+        "width": 380,
+        "height": 120,
+        "url": "http://wiky.github.io/node.upgrader/for-test/demo.zip",
+        "remote": "http://wiky.github.io/node.upgrader/for-test/version.json",
+        "local": "./version.json",
+        "alwaysUpdate": true
+    }
+}
